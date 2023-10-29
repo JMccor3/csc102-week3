@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="stringcode.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input validation</title>
+</head>
+
+<body>
+    <h1>Welcome to my strings.html page</h1>
+    <h2> Input validation section</h2>
+    <div id="loginStatus"> Press Submit to login</div>
+    <p> Please submit the following data for validation</p>
+    <form id="creditsubmit" onsubmit="return false">
+        First Name: <input type="text" id="Fname"><br>
+        Last Name: <input type="text" id="Lname"><br>
+        Zip Code: <input type="text" id="Zipcode"><br>
+        <br>
+        <input type="Submit" onclick="checkCreds()" ;>
+    </form>
+    <br>
+    <br>
+    <h2>Palindrome checker</h2>
+    <br>
+    <div id= "palinStatus"> Palindrome Status</div>
+    <br>
+    <form id= "palinSubmit" onsubmit="return false">
+        Enter possible Palindrome: <input type= "text" id="palinInput"><br>
+        <br>
+        <input type="Submit" onclick="checkPalin();">
+    </form>
+
+</body>
+
+</html>
