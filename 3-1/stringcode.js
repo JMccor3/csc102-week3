@@ -40,7 +40,42 @@ function checkCreds() {
 
 
 }
-function checkPalin(){
-    console.log ("checkPalin() started");
-    
+function checkPalin() {
+    console.log("checkPalin() started");
+    //record the string into a variable
+    var entStr;
+    entStr = document.getElementById("palinInput").value;
+    console.log("entStr is " + entStr);
+
+    //take away any spaces
+    var entStrNoSpace;
+    entStrNoSpace = entStr.split(" ").join("");
+    console.log("entered String with No Spaces is " + entStrNoSpace);
+
+    //create reverse array and string variable
+    var revStr;
+    const revArray = [];
+    var length = entStrNoSpace.length - 1;
+    console.log("string length is " + length);
+
+    //input into array and reverse it
+    for (var i = length; i >= 0; i--) {
+        revArray.push(entStrNoSpace[i]);
+    }
+    //convert to a string from an array
+    revStr = revArray.join("");
+    console.log("The Reverse String is " + revStr)
+
+    //comparison rev to string and write to status
+    var equal = 0;
+    equal = (entStrNoSpace === revStr);
+    console.log("the ent and reversed being equal is: " + equal);
+
+    //write to palindrome status
+    if (equal == true){
+        document.getElementById("palinStatus").innerHTML = entStr + " <b>is</b> a palindrome";
+    } else {
+        document.getElementById("palinStatus").innerHTML = entStr + " is <b>not</b> a palindrome";
+    }
 }
+
